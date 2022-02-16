@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultrasound</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <section>
+          <h1>Ультразвуковая оценка объема <br> щитовидной железы</h1>  
+        </section>
+    </header>
+ <div class="wrapper_for_main_and_nav">
+        <nav id="left_aside">
+        <ul class="menu menu--vert">
+            <li id="thyroid_calculator">Калькулятор объема щитовидной железы</li>
+            <li id="thyroid_measure">Измерение размеров щитовидной железы</li>
+            <li id="thyroid_anatomy">Анатомия щитовидной железы</li>
+            <li>Объем щитовидной железы у детей
+               <ul class="submenu">
+                  <li id="less5_kg">Вес менее 5 кг</li>
+                  <li id="more5_kgs">Вес более 5 кг/старше 6 мес</li>
+               </ul>
+            </li>
+            <li id="thyroid_protocol">Формирование протокола УЗИ</li>
+            <li id="useful">Полезные материалы
+               <ul class="submenu">
+                  <li id="video">Видеоматериалы</li>
+                  <li id="literature">Литературные источники</li>
+              </ul>
+            </li>
+          </ul>  
+    </nav> 
+    <main id="main_content">
+          <div id="calculator">
+            <div class="patient_data">
+            <div class="gender">
+                <p class="text_bold">Выберете пол</p>
+                <input type="radio" id="radio_1.1" name="gender" value="man">
+                <label for="radio_1.1">Мужчина</label>
+                <input type="radio" id="radio_1.2" name="gender" value="woman">
+                <label for="radio_1.2">Женщина</label>
+            </div>
+            <div class="isthmus_width">
+                <p class="text_bold">Ширина перешейка</p>
+                <input type="radio" id="radio_2.1" name="isthmus" value="less1">
+                <label for="radio_2.1">Меньше 1 см</label>
+                <input type="radio" id="radio_2.2" name="isthmus" value="more1"> 
+                <label for="radio_2.2">Больше 1 см</label> 
+            </div>
+        </div>
+        <div class="lobes">
+           <div class="rigth_lobe">
+            <h2>Правая доля</h2>
+            <div class="length">
+                <label for="length1">Длина</label>
+                <input type="text" id="length1" maxlength="5" required>
+                <label for="length1">см</label>
+            </div>
+            <br>
+            <div class="thickness">
+                <label for="thickness1">Толщина</label>
+                <input type="text" id="thickness1" maxlength="5" required>
+                <label for="thickness1">см</label>
+            </div>
+            <br>
+            <div class="width">
+                <label for="width1">Ширина</label>
+                <input type="text" id="width1" maxlength="5" required>
+                <label for="width1">см</label> 
+            </div>
+        </div>
+        <div class="left_lobe">
+            <h2>Левая доля</h2>
+            <div class="length">
+                <label for="length2">Длина</label>
+                <input type="text" id="length2" maxlength="5" required>
+                <label for="length2">см</label>
+            </div>
+            <br>
+            <div class="thickness">
+                <label for="thickness2">Толщина</label>
+                <input type="text" id="thickness2" maxlength="5" required>
+                <label for="thickness2">см</label>
+            </div>
+            <br>
+            <div class="width">
+                <label for="width2">Ширина</label>
+                <input type="text" id="width2" maxlength="5" required>
+                <label for="width2">см</label>
+            </div>
+        </div>
+        </div>
+        <div class="button_of_estimation">
+            <input type="submit" id="button" value="Рассчитать объем щитовидной железы">
+        </div> 
+        <div class="volume">
+            <h2>Объем щитовидной железы</h2>
+            <div id="volume_1">
+              <output class="result" name="resultOfVolume" id="result_1">0</output>
+              <label class="result" for="result_1">мл</label> 
+            </div>
+        </div>
+        <div class="volume_estimate">
+            <div class="normal_volume" id="normal_volume1" hidden>
+                <p>Объем щитовидной железы в пределах нормативных значений</p>
+            </div>
+            <div class="patologic_volume" id="patologic_volume1" hidden>
+                <p>Объем щитовидной железы превышает нормативные значения</p>
+            </div>
+        </div>
+        <div class="volume_data">
+            <h2>Нормативные значения объема</h2>
+            <p>Мужчины - до 25 мл.</p>
+            <p>Женщины - до 18 мл (беременные - до 20 мл).</p>
+            <p>Примечание: данные граничные значения являются ориентировочными.</p>
+        </div>
+          </div>  
+        <div id="sizes">
+            <h2>Измерение размеров щитовидной железы</h2>
+            <figure>
+                <img src="./img/thyroid.4.jpg" alt="Схема измерения размеров щитовидной железы">
+                <figcaption><span>Рисунок 1</span> - Схема измерения размеров щитовидной железы</figcaption>
+            </figure>
+            <figure>
+                <img src="/img/thyroid.5.jpg" alt="">
+                <figcaption><span>Рисунок 2</span> - Измерение размеров ЩЖ на поперечном срезе</figcaption>
+            </figure>
+            <p>Источник: Методика проведения УЗИ щитовидной и паращитовидных желез у взрослых и детей, Москва, 2019 (Департамент здравоохранения города Москвы)</p>
+        </div>
+        <div id="anatomy">
+            <h2>Анатомия щитовидной железы</h2>
+            <figure>
+                <img src="./img/thyroid.1.jpg" alt="Форма, поверхности и отделы ЩЖ">
+                <figcaption><span>Рисунок 1</span> - Форма, поверхности и отделы ЩЖ на различных срезах: <br> A - поперечный срез ЩЖ; <br> B - продольный срез боковой доли ЩЖ</figcaption>
+            </figure>
+            <figure>
+                <img src="./img/thyroid.2.jpg" alt="Поперечный срез мягких тканей шеи">
+                <figcaption><span>Рисунок 2</span> - Поперечный срез мягких тканей шеи на уровне ЩЖ</figcaption>
+            </figure>
+            <ol>
+                <li>Кожа</li>
+                <li>Подкожная клетчатка</li>
+                <li>Мышцы</li>
+                <li>Перешеек щитовидной железы</li>
+                <li>Правая доля щитовидной железы</li>
+                <li>Левая доля щитовидной железы</li>
+                <li>Трахея</li>
+                <li>Тень от трахеи</li>
+                <li>Пищевод</li>
+                <li>Внутренняя сонная артерия</li>
+                <li>Внутренняя сонная вена</li>
+            </ol>
+            <figure>
+                <img src="./img/thyroid.3.jpg" alt="Продольный срез мягких тканей шеи">
+                <figcaption><span>Рисунок 3</span> - Продольный срез мягких тканей шеи на уровне левой доли щитовидной железы</figcaption>
+            </figure>
+            <ol>
+                <li>Кожа</li>
+                <li>Подкожная клетчатка</li>
+                <li>Мышцы шеи</li>
+                <li>Доля щитовидной железы</li>
+            </ol>
+            <p>Источник: Методика проведения УЗИ щитовидной и паращитовидных желез у взрослых и детей, Москва, 2019 (Департамент здравоохранения города Москвы)</p>
+        </div>
+
+        <div id="weight_les_than_5kg">
+            <h2>Суммарный тиреоидный объем у детей раннего возраста с весом до 5 кг</h2>
+            <table align="center" border="1" cellpadding="5">
+               <tr>
+                   <th>Масса тела (кг)</th>
+                   <th>Тиреоидный <br> объем (мл)</th>
+                   <th>Масса тела (кг)</th>
+                   <th>Тиреоидный <br> объем (мл)</th>
+                   <th>Масса тела (кг)</th>
+                   <th>Тиреоидный <br> объем (мл)</th>
+               </tr>  
+               <tr>
+                   <td>2,0</td>
+                   <td>0,36-0,78</td>
+                   <td>3,0</td>
+                   <td>0,45-0,87</td>
+                   <td>4,0</td>
+                   <td>0,53-0,95</td>
+               </tr>
+               <tr>
+                   <td>2,1</td>
+                   <td>0,37-0,79</td>
+                   <td>3,1</td>
+                   <td>0,46-0,88</td>
+                   <td>4,1</td>
+                   <td>0,54-0,96</td>
+               </tr> 
+               <tr>
+                   <td>2,2</td>
+                   <td>0,38-0,8</td>
+                   <td>3,2</td>
+                   <td>0,46-0,88</td>
+                   <td>4,2</td>
+                   <td>0,55-0,97</td>
+               </tr>
+               <tr>
+                   <td>2,3</td>
+                   <td>0,38-0,8</td>
+                   <td>3,3</td>
+                   <td>0,47-0,89</td>
+                   <td>4,3</td>
+                   <td>0,56-0,98</td>
+               </tr>
+               <tr>
+                   <td>2,4</td>
+                   <td>0,39-0,81</td>
+                   <td>3,4</td>
+                   <td>0,48-0,9</td>
+                   <td>4,4</td>
+                   <td>0,57-0,99</td>
+               </tr>
+               <tr>
+                   <td>2,5</td>
+                   <td>0,4-0,82</td>
+                   <td>3,5</td>
+                   <td>0,49-0,91</td>
+                   <td>4,5</td>
+                   <td>0,58-1,0</td>
+               </tr>
+               <tr>
+                   <td>2,6</td>
+                   <td>0,41-0,83</td>
+                   <td>3,6</td>
+                   <td>0,5-0,92</td>
+                   <td>4,6</td>
+                   <td>0,59-1,01</td>
+               </tr>
+               <tr>
+                   <td>2,7</td>
+                   <td>0,42-0,84</td>
+                   <td>3,7</td>
+                   <td>0,51-0,93</td>
+                   <td>4,7</td>
+                   <td>0,6-1,02</td>
+               </tr>
+               <tr>
+                   <td>2,8</td>
+                   <td>0,43-0,85</td>
+                   <td>3,8</td>
+                   <td>0,52-0,94</td>
+                   <td>4,8</td>
+                   <td>0,6-1,03</td>
+               </tr>
+               <tr>
+                   <td>2,9</td>
+                   <td>0,44-0,86</td>
+                   <td>3,9</td>
+                   <td>0,53-0,95</td>
+                   <td>4,9</td>
+                   <td>0,61-1,03</td>
+               </tr>
+            </table>
+        </div>
+
+        <div id="weight_more_than_5kg">
+            <h2>Суммарный тиреоидный объем у детей после 6 месяцев и весом более 5 кг</h2>
+        </div>
+        <div id="protocol_gen">
+            <h2>Скоро вы сможете генерировать протоколы</h2>
+            <img src="./img/spinner.gif" alt="Функциональность дорабатывается">
+        </div>
+
+        <div id="books">
+            <h2>Список рекомендованной литературы</h2>
+            <ol>
+                <li>Нормальная ультразвуковая анатомия внутренних органов и поверхност-
+                    но расположенных структур. Практическое руководство с видеоуроками.
+                    / Под ред. В.А. Сандрикова, Е.П. Фисенко. – М. : Фирма СТРОМ. – 2012. – 192 с.</li>
+                <li>Ультразвуковая диагностика заболеваний внутренних органов и поверх-
+                    ностно расположенных структур. Практическое руководство. / Под ред.
+                    В.А. Сандрикова, Е.П. Фисенко. – М. : Фирма СТРОМ. – 2013. – 288 с.</li>
+                <li> Сенча, А.Н. Ультразвуковая диагностика. Поверхностно-расположенные
+                    органы. / А.Н. Сенча – М. : Издательский дом Видар. – 2015. – 512 с.</li>
+                <li>Митьков, В.В. Практическое руководство по ультразвуковой диагностике.
+                    Общая ультразвуковая диагностика (брюшная полость, мошонка, лимфа-
+                    тическая система, грудная клетка, молочные, щитовидная, слюнные желе-
+                    зы). / В.В. Митьков – М. : Издательский дом Видар. – 2011. – 720 с.</li>
+                <li>Ультразвуковая диагностика заболеваний головы и шеи / Х-Ю. Велько-
+                    борски, П. Йеккер, Я. Маурер, В.Ю. Манн – М. : «МЕДпресс-инфрм». – 2016.
+                    – 176 с.</li>
+                <li>Детская ультразвуковая диагностика. Том 5. / Под редакцией М.И. Пыкова.
+                    – М. : Издательский дом Видар. – 2016. – 360 с.</li>
+                <li>Ольхова, Е.Б. Ультразвуковая диагностика в неотложной неонатологии.
+                    Руководство для врачей. Том 1. / Е.Б. Ольхова – М. : Фирма СТРОМ. – 2016.
+                    – 1136 с.</li>
+            </ol>
+        </div>
+
+        <div id="thyroid_videos">
+            <h2>Щитовидная железа: ататомия, размеры</h2>
+            <iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/ZtBc_Bp1i5A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </main>
+</div>
+    <footer>
+        <p class="copyright">&#169 Коротков Дмитрий, 2022</p>
+         <a href="https://www.instagram.com/dr.dmitry1995mos/">
+                <img src="./img/instagram.png" alt="Инстаграмм">
+        </a>
+    </footer>
+    <script src="./js/index.js" defer></script>
+</body>
+</html>
