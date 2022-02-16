@@ -1,0 +1,396 @@
+body {
+    background-color: rgba(170, 219, 238, 0.692);
+    font-family: arial;
+    width: 99vw;
+    margin-bottom: -30px;
+}
+
+header {
+    display: block;
+    width: 99vw;
+}
+
+section {
+    height: 220px;
+    border: 3px solid rgb(146, 204, 252); 
+    margin-top: 2px; 
+    background-image: url(../img/thyroid_bg.png);
+    background-color:rgb(146, 204, 252); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 1px 1px 1px #000;
+    padding-top: 15px;
+    padding-left: 110px;
+}
+
+h2 {
+    text-align: center;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 10px;
+}
+
+span {
+    font-weight: 600;
+}
+
+.wrapper_for_main_and_nav {
+    display: flex;
+    width: 95vw;
+}
+
+main {
+    display: block;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    color: rgb(1, 25, 102);
+}
+
+figure img {
+    display: block;
+    width: 600px;
+    margin: 0 auto;
+}
+
+table {
+    text-align: center;
+    border-spacing: 0px;
+    background-color:rgba(135, 206, 235, 0.692);
+    border-color:rgb(1, 25, 102);
+    margin-top: 30px;
+}
+
+.text_bold {
+    font-weight: 700;
+}
+
+.patient_data {
+    display: block;
+    border: 0px solid black;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+input[type='radio'],
+label {
+  cursor: pointer;
+}
+
+input[type='radio'] {
+  position: relative;
+  height: 14px;
+  width: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input[type='radio']::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid dodgerblue;
+  }
+  
+  input[type='radio']:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: dodgerblue;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+  }
+
+.lobes {
+    width: 650px;
+    height: 210px;
+    position:relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: 0px solid black;
+    font-size: 18px;
+}
+
+.rigth_lobe {
+    display: inline-block;
+    border: 0px solid black;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+}
+
+.left_lobe {
+    display: inline-block;
+    border: 0px solid black;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+}
+
+input {
+    width: 70px;
+}
+
+.button_of_estimation {
+    width: 300px;
+    height: 30px;
+    position:relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#button {
+    width: 305px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color:rgba(152, 185, 247, 0.89);
+    border: 2px solid rgb(69, 134, 255);
+}
+
+#button:hover {
+    width: 305px;
+    border-radius: 10px;
+    background-color:rgba(243, 135, 145);
+    font-size: 16px;
+    border: 2px solid rgb(245, 63, 81);
+}
+
+.volume {
+    display: block;
+    border: 0px solid black;
+    text-align: center;
+}
+
+#volume_1 {
+    width: 100px;
+    position:relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.result {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.volume_estimate {
+    display: block;
+    border: 0px solid black;
+    text-align: center;
+    font-size: 18px;
+}
+
+.volume_data  {
+    display: block;
+    border: 0px solid black;
+    text-align: center;
+    font-size: 18px;
+}
+
+.volume_data p  {
+    font-size: 16px;
+}
+
+.normal_volume {
+    color: green;
+}
+
+.patologic_volume {
+    color:red;
+}
+
+#sizes {
+    display: none;
+}
+
+#sizes p {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#anatomy {
+    display: none;
+}
+
+#anatomy p {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#weight_les_than_5kg {
+    display: none;
+}
+
+#weight_more_than_5kg {
+    display: none;
+}
+
+#protocol_gen {
+    display: none;
+}
+
+#books {
+    display: none;
+}
+
+#thyroid_videos {
+    display: none;
+}
+
+nav {
+    display: block;
+    align-items: stretch; 
+    background-color: rgba(115, 202, 236, 0.692);
+    width: 250px;
+    height: auto; 
+    color: rgb(1, 25, 102);
+}
+
+nav ul {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    position: relative;
+    top: -36px;
+}
+
+#anatomy ol {
+    margin: 0 auto;
+    width: 600px;
+    text-align: left;
+    column-count: 2;
+}
+
+#protocol_gen img {
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 30px;
+}
+
+#books ol {
+    margin: 0 auto;
+    width: 800px;
+    margin-bottom: 20px;
+}
+
+nav li  {
+    display: block;
+    z-index: 2;
+    text-decoration: none;
+    background-color: rgb(224, 224, 224);
+    padding: 1em; 
+    margin-bottom: -19px;
+    /* white-space: nowrap; */
+}
+
+nav li:hover > li,
+nav li:hover {
+    background-color: rgb(243, 135, 145);
+}
+
+nav li:focus {
+    outline: none;
+    background-color: rgb(243, 135, 145);
+}
+
+li {
+    position: relative;
+}
+
+li:focus-within > .submenu, 
+li:hover > .submenu {
+    clip: auto;
+    width: 150px;
+    height: auto;
+    margin: 0;
+}
+
+.menu--vert {
+    flex-direction: column;
+    width: 250px;
+}
+
+.menu--vert .submenu {
+    top: 0;
+    left: 100%;
+}
+
+.submenu {
+   flex-direction: column;
+   position: absolute;
+   padding-top: 1em;
+   clip: rect(0 0 0 0);
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+}
+
+h3 {
+    text-align: center;
+}
+
+li {
+    margin-top: 20px;
+}
+
+footer {
+    display: block;
+    margin-top: -10px;
+    background-color: rgba(86, 179, 255);
+    height: 55px;
+    width: 99vw;
+    color: rgb(1, 25, 102);
+}
+
+.copyright {
+    margin: 10px 0 0 80px;
+    padding-top: 10px;
+}
+
+footer a {
+    display: inline-block;
+    position: relative;
+    left: 85vw;
+    bottom: 20px;
+}
+
+footer img {
+    width: 30px;
+}
+
+.youtube {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 30px;
+}
